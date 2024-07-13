@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  meilisearch:
+    image: "getmeili/meilisearch:v1.9"
+    env_file: ".env"
+    ports:
+      - "33655:7700"
+    volumes:
+      - "./server:/meili_data"
